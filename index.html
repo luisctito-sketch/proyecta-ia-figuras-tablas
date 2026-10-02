@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PROYECTA-IA: revisión transversal de figuras, tablas, resolución de imágenes y redacción científica impersonal para proyectos de grado.">
+  <title>PROYECTA-IA | Figuras, Tablas y Redacción Científica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="access-locked">
+
+  <div id="accessGate" class="access-gate">
+    <div class="access-card">
+      <div class="access-logo">P</div>
+      <h2>Acceso a PROYECTA-IA</h2>
+      <p class="access-subtitle">Figuras · Tablas · Redacción científica</p>
+      <p>Ingresa tu número de Carnet de Identidad autorizado.</p>
+      <label for="ciAccess">Número de C.I.</label>
+      <input id="ciAccess" type="password" inputmode="numeric" autocomplete="off" placeholder="Solo números">
+      <button id="accessBtn" class="primary access-button" type="button">Ingresar</button>
+      <p id="accessMessage" class="access-message" aria-live="polite"></p>
+      <p class="access-privacy">El acceso se valida mediante la base central de PROYECTA-IA.</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div>
+          <h1>PROYECTA-IA</h1>
+          <p>Herramienta transversal para todo el Proyecto de Grado</p>
+          <p class="author">Realizado por: Luis Cabezas Tito, Ph. D.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="badge">FIGURAS · TABLAS · REDACCIÓN</div>
+        <button id="logoutBtn" class="logout-btn hidden" type="button">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">HERRAMIENTA TRANSVERSAL</span>
+      <h2>FIGURAS Y TABLAS QUE <span>SE CITAN, SE EXPLICAN Y SE PRESENTAN CON CRITERIO ACADÉMICO</span></h2>
+      <p>
+        Este chatbot revisa la presentación de figuras y tablas en cualquier capítulo del Proyecto de Grado.
+        También comprueba resolución para impresión, numeración por capítulo, fuente, nota, referencia desde el
+        párrafo anterior, explicación posterior y redacción científica en tercera persona.
+      </p>
+
+      <div class="hero-grid">
+        <article><span>①</span><strong>Citar antes</strong><p>Toda figura o tabla debe ser anunciada desde el texto que la precede.</p></article>
+        <article><span>②</span><strong>Presentar correctamente</strong><p>Título, numeración, tipografía, fuente y nota según la plantilla institucional.</p></article>
+        <article><span>③</span><strong>Interpretar después</strong><p>Debajo debe explicarse qué muestra y por qué es relevante para el argumento.</p></article>
+        <article><span>④</span><strong>Redactar impersonalmente</strong><p>Evitar “hicimos”, “desarrollamos”, “medimos”; usar formas científicas en tercera persona.</p></article>
+      </div>
+    </section>
+
+    <nav class="section-nav">
+      <a href="#reglas">Reglas</a>
+      <a href="#figuras">Figuras</a>
+      <a href="#dpi">300 ppp</a>
+      <a href="#tablas">Tablas</a>
+      <a href="#continuacion">Continuación</a>
+      <a href="#citar">Citar desde el texto</a>
+      <a href="#explicar">Explicar después</a>
+      <a href="#persona">Tercera persona</a>
+      <a href="#revisor">Revisor integral</a>
+      <a href="#apa">APA</a>
+    </nav>
+
+    <section id="reglas" class="card">
+      <span class="section-number">1</span>
+      <h3>REGLAS INSTITUCIONALES QUE APLICA PROYECTA-IA</h3>
+
+      <div class="rules-grid">
+        <article>
+          <h4>Figuras</h4>
+          <ul>
+            <li>Título encima de la figura.</li>
+            <li><b>Times New Roman 10 pt, negrilla, centrado.</b></li>
+            <li>Formato: <b>Fig. C.N. Nombre de la figura.</b></li>
+            <li>C = capítulo; N = número consecutivo dentro del capítulo.</li>
+            <li>Marco negro alrededor de la figura.</li>
+            <li>Resolución efectiva mínima recomendada: <b>300 ppp</b> para impresión.</li>
+            <li>Color cuando aporta información; blanco y negro cuando el contenido lo permite o corresponde.</li>
+          </ul>
+        </article>
+        <article>
+          <h4>Fuente y nota</h4>
+          <ul>
+            <li>Debajo de la figura o tabla, alineadas a la izquierda.</li>
+            <li>Times New Roman 10 pt, renglón seguido.</li>
+            <li>Solo las palabras <b>Fuente:</b> y <b>Nota:</b> van en negrilla.</li>
+            <li>Fuente externa: autor/empresa/institución + <b>(año)</b>.</li>
+            <li>Fuente propia: <b>Elaboración propia (año).</b></li>
+            <li>La nota se usa si hace falta aclarar modificación, adaptación, URL, condición o explicación adicional.</li>
+          </ul>
+        </article>
+        <article>
+          <h4>Tablas</h4>
+          <ul>
+            <li>Título encima: <b>Tabla C.N. Nombre de la tabla.</b></li>
+            <li>Times New Roman 10 pt, negrilla, centrado.</li>
+            <li>Encabezados de columnas centrados, negrilla, 10 pt.</li>
+            <li>Texto del cuerpo: Times New Roman 10 pt, sin negrilla.</li>
+            <li>Interlineado continuo/sencillo.</li>
+            <li>Sin líneas horizontales internas entre filas del cuerpo.</li>
+            <li>Se mantienen líneas verticales y el cierre/estructura externa de la tabla según la plantilla.</li>
+          </ul>
+        </article>
+        <article>
+          <h4>Relación con el texto</h4>
+          <ul>
+            <li>La figura o tabla <b>no aparece aislada</b>.</li>
+            <li>Debe ser mencionada en un párrafo anterior: “como se observa en la Fig. 3.4...”</li>
+            <li>Debajo debe existir un párrafo interpretativo.</li>
+            <li>El párrafo posterior no repite el título: explica significado, relación, tendencia o utilidad.</li>
+            <li>Evitar primera persona singular o plural en todos los capítulos.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="notice blue">
+        <strong>Regla de integridad académica:</strong> una figura tomada de Internet no se convierte en
+        “Elaboración propia” por recortarla, cambiar colores o agregar etiquetas. Debe conservarse la fuente real;
+        la modificación se explica en la <b>Nota</b>.
+      </div>
+    </section>
+
+    <section id="figuras" class="card">
+      <span class="section-number">2</span>
+      <h3>MODELO DE FIGURA CORRECTAMENTE PRESENTADA</h3>
+
+      <div class="document-preview">
+        <div class="fig-title">Fig. 3.4. Arquitectura funcional de un sistema automático de ventilación.</div>
+        <div class="figure-frame">
+          <svg viewBox="0 0 950 370" class="model-svg" xmlns="http://www.w3.org/2000/svg">
+            <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z"/></marker></defs>
+            <rect x="55" y="130" width="150" height="85" rx="8" class="block"/>
+            <text x="130" y="163" text-anchor="middle">Sensores</text>
+            <text x="130" y="187" text-anchor="middle" class="sub">T · HR · CO₂</text>
+
+            <rect x="285" y="130" width="180" height="85" rx="8" class="block"/>
+            <text x="375" y="163" text-anchor="middle">Controlador</text>
+            <text x="375" y="187" text-anchor="middle" class="sub">procesamiento</text>
+
+            <rect x="545" y="130" width="160" height="85" rx="8" class="block"/>
+            <text x="625" y="163" text-anchor="middle">Driver</text>
+            <text x="625" y="187" text-anchor="middle" class="sub">etapa de potencia</text>
+
+            <rect x="785" y="130" width="120" height="85" rx="8" class="block"/>
+            <text x="845" y="163" text-anchor="middle">Ventilador</text>
+            <text x="845" y="187" text-anchor="middle" class="sub">actuador</text>
+
+            <rect x="300" y="270" width="150" height="62" rx="8" class="aux"/>
+            <text x="375" y="305" text-anchor="middle">Interfaz</text>
+
+            <line x1="205" y1="172" x2="285" y2="172" class="flow" marker-end="url(#arr)"/>
+            <line x1="465" y1="172" x2="545" y2="172" class="flow" marker-end="url(#arr)"/>
+            <line x1="705" y1="172" x2="785" y2="172" class="flow" marker-end="url(#arr)"/>
+            <line x1="375" y1="215" x2="375" y2="270" class="flow" marker-end="url(#arr)"/>
+            <path d="M845 215 C845 310, 170 330, 130 215" class="feedback" marker-end="url(#arr)"/>
+            <text x="530" y="347" text-anchor="middle" class="sub">realimentación del proceso</text>
+          </svg>
+        </div>
+        <div class="source-line"><b>Fuente:</b> Elaboración propia (2026).</div>
+        <div class="source-line"><b>Nota:</b> El diagrama representa el flujo funcional de sensado, procesamiento, actuación y realimentación del sistema.</div>
+      </div>
+
+      <div class="context-example">
+        <h4>Párrafo que debe aparecer ANTES de la figura</h4>
+        <p>
+          La arquitectura propuesta integra los subsistemas de sensado, procesamiento, potencia y actuación,
+          además de una interfaz de supervisión. Como se observa en la <b>Fig. 3.4</b>, las variables ambientales
+          son adquiridas por los sensores y procesadas por el controlador antes de generar la acción de ventilación.
+        </p>
+        <h4>Párrafo que debe aparecer DESPUÉS de la figura</h4>
+        <p>
+          En la arquitectura mostrada se identifica una trayectoria directa desde la adquisición de variables hasta
+          el actuador, complementada por una realimentación que permite actualizar el estado del proceso. Esta
+          organización separa las funciones de medición, decisión y potencia, lo cual facilita el diseño y la
+          verificación individual de cada subsistema antes de su integración.
+        </p>
+      </div>
+
+      <div class="notice amber">
+        Una fotografía de un componente también puede ser una figura, pero debe aportar información pertinente.
+        Evita llenar el documento con imágenes decorativas que no son citadas ni explicadas.
+      </div>
+    </section>
+
+    <section id="dpi" class="card">
+      <span class="section-number">3</span>
+      <h3>COMPROBADOR DE RESOLUCIÓN EFECTIVA PARA IMPRESIÓN</h3>
+      <p>
+        “300 ppp” depende de cuántos píxeles tendrá la imagen <b>al tamaño real con que se imprimirá</b>.
+        Una imagen de muchos píxeles puede quedar por debajo de 300 ppp si se amplía demasiado en Word.
+      </p>
+
+      <div class="dpi-grid">
+        <div>
+          <label for="figureImage">Carga la figura</label>
+          <input id="figureImage" type="file" accept="image/png,image/jpeg,image/webp">
+          <div id="imageMeta" class="small"></div>
+          <div id="imagePreviewWrap" class="image-preview hidden"><img id="imagePreview" alt="Vista previa de la figura"></div>
+        </div>
+        <div>
+          <label for="printWidthCm">Ancho que tendrá en Word (cm)</label>
+          <input id="printWidthCm" inputmode="decimal" value="14">
+          <label for="printHeightCm">Alto en Word (cm, opcional)</label>
+          <input id="printHeightCm" inputmode="decimal" placeholder="Se calcula proporcionalmente si lo dejas vacío">
+          <button id="checkDpiBtn" class="primary" type="button">Calcular ppp efectivos</button>
+          <div id="dpiOutput" class="output-box hidden"></div>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <b>Resolución efectiva:</b>
+        <span>ppp = píxeles / pulgadas de impresión</span>
+        <small>1 pulgada = 2,54 cm. Para 300 ppp, una figura de 14 cm de ancho necesita aproximadamente 1654 píxeles horizontales.</small>
+      </div>
+    </section>
+
+    <section id="tablas" class="card">
+      <span class="section-number">4</span>
+      <h3>MODELO DE TABLA PARA INGENIERÍA ELECTRÓNICA</h3>
+
+      <div class="document-preview">
+        <div class="fig-title">Tabla 3.6. Criterios técnicos para la selección de sensores de temperatura.</div>
+        <table class="model-table">
+          <thead>
+            <tr>
+              <th>Alternativa</th>
+              <th>Rango de medición</th>
+              <th>Resolución</th>
+              <th>Interfaz</th>
+              <th>Criterio de selección</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sensor A</td><td>−40 °C a 125 °C</td><td>0,1 °C</td><td>Digital</td><td>Adecuado para el rango del proceso</td></tr>
+            <tr><td>Sensor B</td><td>−20 °C a 80 °C</td><td>0,5 °C</td><td>Analógica</td><td>Resolución insuficiente</td></tr>
+            <tr><td>Sensor C</td><td>−55 °C a 150 °C</td><td>0,25 °C</td><td>Digital</td><td>Mayor rango, mayor complejidad</td></tr>
+          </tbody>
+        </table>
+        <div class="source-line"><b>Fuente:</b> Elaboración propia (2026).</div>
+        <div class="source-line"><b>Nota:</b> Los valores son demostrativos y solo ilustran la estructura de una tabla comparativa.</div>
+      </div>
+
+      <div class="context-example">
+        <h4>Referencia anterior</h4>
+        <p>
+          Para seleccionar el elemento de medición se compararon tres alternativas mediante criterios comunes de
+          rango, resolución e interfaz. Los resultados de esta comparación se presentan en la <b>Tabla 3.6</b>.
+        </p>
+        <h4>Interpretación posterior</h4>
+        <p>
+          Los datos comparados muestran que la alternativa A satisface el rango requerido y ofrece una resolución
+          superior a la alternativa B sin ampliar innecesariamente el intervalo de medición. Por esta razón, la
+          selección debe sustentarse en los requerimientos específicos del sistema y no únicamente en la disponibilidad
+          comercial del componente.
+        </p>
+      </div>
+
+      <div class="notice blue">
+        En una tabla de selección, todos los componentes deben compararse con <b>los mismos criterios</b>.
+        No es correcto describir un sensor por resolución, otro por precio y un tercero por protocolo si luego se
+        pretende afirmar cuál es “mejor”.
+      </div>
+    </section>
+
+    <section id="continuacion" class="card">
+      <span class="section-number">5</span>
+      <h3>CUANDO UNA TABLA CONTINÚA EN LA PÁGINA SIGUIENTE</h3>
+      <p>
+        Si una tabla no cabe en una sola página, debe indicarse la continuación y repetirse el encabezado de columnas
+        para que la segunda parte pueda leerse de forma autónoma.
+      </p>
+
+      <div class="continuation-grid">
+        <div class="paper-mini">
+          <div class="mini-title">Tabla 3.8. Variables de diagnóstico del proceso.</div>
+          <table class="model-table compact">
+            <thead><tr><th>Variable</th><th>Valor actual</th><th>Referencia</th></tr></thead>
+            <tbody>
+              <tr><td>Temperatura</td><td>180 °C–300 °C</td><td>220 °C–240 °C</td></tr>
+              <tr><td>Humedad</td><td>20 %–40 %</td><td>70 %–80 %</td></tr>
+              <tr><td>Consumo</td><td>+20 %–35 %</td><td>Optimización</td></tr>
+            </tbody>
+          </table>
+          <div class="page-number">Página 1</div>
+        </div>
+        <div class="paper-mini">
+          <div class="mini-title">Tabla 3.8. Variables de diagnóstico del proceso (continuación).</div>
+          <table class="model-table compact">
+            <thead><tr><th>Variable</th><th>Valor actual</th><th>Referencia</th></tr></thead>
+            <tbody>
+              <tr><td>Eficiencia</td><td>40 %–50 %</td><td>60 %–75 %</td></tr>
+              <tr><td>CO</td><td>&gt; 50 ppm</td><td>≤ 25 ppm</td></tr>
+              <tr><td>Tiempo</td><td>±5 min a ±10 min</td><td>Tiempo programado</td></tr>
+            </tbody>
+          </table>
+          <div class="source-line small-source"><b>Fuente:</b> Elaboración propia (2026).</div>
+          <div class="page-number">Página 2</div>
+        </div>
+      </div>
+
+      <div class="notice amber">
+        No partas una fila entre páginas si puede evitarse. En Word conviene repetir automáticamente la fila de
+        encabezado y controlar la opción de dividir filas entre páginas.
+      </div>
+    </section>
+
+    <section id="citar" class="card">
+      <span class="section-number">6</span>
+      <h3>TODA FIGURA O TABLA DEBE SER CITADA DESDE EL TEXTO</h3>
+
+      <div class="citation-examples">
+        <div class="good-example">
+          <b>Formas correctas</b>
+          <p>“Como se observa en la <b>Fig. 2.3</b>, la arquitectura se organiza en cuatro niveles funcionales.”</p>
+          <p>“Los criterios de comparación se resumen en la <b>Tabla 3.6</b>.”</p>
+          <p>“La <b>Fig. 4.5</b> muestra la respuesta temporal obtenida durante la prueba.”</p>
+          <p>“De acuerdo con los valores presentados en la <b>Tabla 1.2</b>, el consumo aumenta...”</p>
+        </div>
+        <div class="bad-example">
+          <b>Evitar</b>
+          <p>Insertar la figura inmediatamente después de un subtítulo, sin que ningún párrafo la mencione.</p>
+          <p>Escribir únicamente “véase figura” sin número.</p>
+          <p>Decir “la imagen de abajo” o “la tabla anterior”.</p>
+          <p>Colocar una figura que nunca vuelve a ser interpretada en el argumento.</p>
+        </div>
+      </div>
+
+      <label for="beforeText">Pega el párrafo anterior a la figura o tabla</label>
+      <textarea id="beforeText" rows="7" placeholder="Ej.: La arquitectura del sistema se muestra en la Fig. 3.4..."></textarea>
+
+      <div class="three-col">
+        <div><label for="itemType">Tipo</label><select id="itemType"><option value="fig">Figura</option><option value="table">Tabla</option></select></div>
+        <div><label for="chapterNumber">Capítulo</label><input id="chapterNumber" type="number" min="1" value="3"></div>
+        <div><label for="itemNumber">Número consecutivo</label><input id="itemNumber" type="number" min="1" value="1"></div>
+      </div>
+
+      <button id="checkCitationBtn" class="primary" type="button">Comprobar referencia en el texto</button>
+      <div id="citationOutput" class="output-box hidden"></div>
+    </section>
+
+    <section id="explicar" class="card">
+      <span class="section-number">7</span>
+      <h3>DESPUÉS DE LA FIGURA O TABLA: INTERPRETAR, NO REPETIR</h3>
+
+      <div class="interpret-grid">
+        <article><b>Qué se observa</b><p>Identifica el patrón, bloque, tendencia, comparación o relación importante.</p></article>
+        <article><b>Qué significa</b><p>Explica la implicación técnica de la información.</p></article>
+        <article><b>Por qué importa</b><p>Vincula lo observado con el objetivo, problema o decisión de diseño.</p></article>
+        <article><b>Qué se hará con ello</b><p>Cuando corresponda, muestra cómo conduce a una selección, cálculo, ajuste o siguiente etapa.</p></article>
+      </div>
+
+      <label for="afterText">Pega el párrafo posterior</label>
+      <textarea id="afterText" rows="8" placeholder="Explica qué muestra y qué significa la figura o los datos de la tabla."></textarea>
+      <button id="checkAfterBtn" class="primary" type="button">Revisar interpretación</button>
+      <div id="afterOutput" class="output-box hidden"></div>
+    </section>
+
+    <section id="persona" class="card">
+      <span class="section-number">8</span>
+      <h3>REDACCIÓN CIENTÍFICA: EVITAR PRIMERA PERSONA</h3>
+      <p>
+        En todo el Proyecto de Grado se emplea redacción científica e impersonal. Evita primera persona singular
+        y plural. PROYECTA-IA marca especialmente formas verbales terminadas en <b>-amos, -emos, -imos</b> cuando
+        puedan expresar “nosotros”, además de verbos frecuentes en primera persona.
+      </p>
+
+      <div class="rewrite-table">
+        <table>
+          <thead><tr><th>Evitar</th><th>Preferir</th></tr></thead>
+          <tbody>
+            <tr><td>“Desarrollamos el prototipo...”</td><td>“Se desarrolló el prototipo...”</td></tr>
+            <tr><td>“Hicimos diez mediciones...”</td><td>“Se realizaron diez mediciones...”</td></tr>
+            <tr><td>“Medimos la señal con el osciloscopio...”</td><td>“La señal fue medida mediante un osciloscopio...”</td></tr>
+            <tr><td>“Implementamos el algoritmo...”</td><td>“Se implementó el algoritmo...”</td></tr>
+            <tr><td>“Elegimos el sensor A...”</td><td>“Se seleccionó el sensor A de acuerdo con los criterios establecidos...”</td></tr>
+            <tr><td>“Podemos observar en la figura...”</td><td>“En la figura se observa...”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <label for="personText">Pega un fragmento para revisar</label>
+      <textarea id="personText" rows="11" placeholder="Pega uno o varios párrafos del proyecto..."></textarea>
+      <button id="checkPersonBtn" class="primary" type="button">Detectar primera persona</button>
+      <div id="personOutput" class="output-box hidden"></div>
+
+      <div class="notice blue">
+        El detector trabaja por patrones lingüísticos y puede producir falsos positivos. La regla definitiva es
+        semántica: el sujeto del texto debe ser el sistema, el procedimiento, el estudio, la medición, la figura,
+        la tabla o una construcción impersonal; no el autor como “yo” o “nosotros”.
+      </div>
+    </section>
+
+    <section id="revisor" class="card">
+      <span class="section-number">9</span>
+      <h3>REVISOR INTEGRAL DE UNA FIGURA O TABLA</h3>
+      <p>
+        Completa los campos. El sistema comprobará numeración, título, fuente, nota, referencia anterior,
+        interpretación posterior y redacción impersonal.
+      </p>
+
+      <div class="two-col">
+        <div>
+          <label for="fullType">Tipo</label>
+          <select id="fullType"><option value="fig">Figura</option><option value="table">Tabla</option></select>
+          <label for="fullChapter">Capítulo</label><input id="fullChapter" type="number" min="1" value="3">
+          <label for="fullNumber">Número</label><input id="fullNumber" type="number" min="1" value="1">
+        </div>
+        <div>
+          <label for="fullTitle">Título</label><input id="fullTitle" placeholder="Arquitectura del sistema de monitoreo.">
+          <label for="fullSource">Fuente</label><input id="fullSource" placeholder="Elaboración propia (2026).">
+          <label for="fullNote">Nota (opcional)</label><input id="fullNote" placeholder="Adaptado, modificado, URL u otra aclaración.">
+        </div>
+      </div>
+
+      <label for="fullBefore">Párrafo anterior</label>
+      <textarea id="fullBefore" rows="6"></textarea>
+      <label for="fullAfter">Párrafo posterior</label>
+      <textarea id="fullAfter" rows="6"></textarea>
+
+      <button id="runFullReviewBtn" class="primary" type="button">Emitir dictamen</button>
+      <div id="fullReviewOutput" class="output-box hidden"></div>
+    </section>
+
+    <section id="apa" class="card">
+      <span class="section-number">10</span>
+      <h3>RELACIÓN CON LAS NORMAS APA Y WORD</h3>
+      <p>
+        Este módulo controla la <b>presentación institucional</b> de figuras y tablas. Cuando la figura o tabla
+        proviene de una fuente externa, la cita y la referencia bibliográfica deben concordar con las normas APA 6
+        adoptadas por PROYECTA-IA y con la gestión de fuentes en Word.
+      </p>
+
+      <div class="apa-links">
+        <a href="https://luisctito-sketch.github.io/proyecta-ia-apa6/" target="_blank" rel="noopener">📑 APA 6 · Citas y Referencias</a>
+        <a href="https://luisctito-sketch.github.io/proyecta-ia-apa6-word/" target="_blank" rel="noopener">🖥️ APA 6 · Microsoft Word</a>
+      </div>
+
+      <div class="notice amber">
+        <strong>Jerarquía de normas:</strong> para la apariencia física del Proyecto de Grado prevalece la plantilla
+        institucional adoptada; APA se utiliza especialmente para citas, referencias y trazabilidad de las fuentes.
+      </div>
+    </section>
+
+    <section class="card">
+      <span class="section-number">11</span>
+      <h3>PROMPT DE REVISIÓN PROFUNDA EN CHATGPT</h3>
+      <p>
+        Puedes adjuntar una captura de tu figura o tabla junto con este prompt para recibir una revisión visual
+        completa sin que PROYECTA-IA invente fuentes ni datos.
+      </p>
+      <button id="copyPromptBtn" class="primary" type="button">Copiar prompt completo</button>
+      <span id="promptStatus" class="small"></span>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div><strong>PROYECTA-IA</strong><p>Figuras · Tablas · Redacción científica impersonal</p></div>
+      <div class="footer-author">Luis Cabezas Tito, Ph. D.</div>
+    </div>
+  </footer>
+
+  <script src="https://luisctito-sketch.github.io/proyecta-ia-acceso/access.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
