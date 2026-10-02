@@ -74,3 +74,20 @@ URL esperada:
 - `styles.css`
 - `app.js`
 - `README.md`
+
+## Ejemplos de Fuente y Nota añadidos
+
+El módulo incluye ahora cuatro ejemplos explícitos:
+
+- figura de elaboración propia;
+- figura obtenida de un sitio web;
+- tabla de elaboración propia;
+- tabla construida con datos obtenidos de un sitio web.
+
+Regla institucional reforzada: el año va siempre entre paréntesis cuando existe información de año:
+
+- `Fuente: Elaboración propia (2026).`
+- `Fuente: Hornos de panificación G.PANIZ (2026).`
+- `Fuente: [Autor/empresa/institución] (2026).`
+
+La URL y la fecha de consulta se colocan en `Nota:` cuando correspondan. Si la fuente no informa fecha, no se inventa un año; debe resolverse como fuente sin fecha mediante el módulo APA.
